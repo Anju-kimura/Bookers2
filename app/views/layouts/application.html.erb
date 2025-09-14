@@ -18,7 +18,7 @@
         </li>
       <% if user_signed_in? %>
         <li>
-          <%= link_to "Home", user_path %>
+          <%= link_to "Home", user_path(current_user) %>
         </li>
         <li>
           <%= link_to "Users", users_path %>
@@ -27,7 +27,7 @@
           <%= link_to "Books", books_path %>
         </li>
         <li>
-          <%= link_to "Log out", destroy_user_session_path, method: delete %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
         </li>
       <% else %>
         <li>
@@ -46,10 +46,13 @@
     <%= yield %>
 
     <footer>
-    <div class="row">
-      <div class="col-6 mx-auto">
-        <div class="p-3">CopyRight Infratop.inc</div>
-      <div>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <p>CopyRight Infratop.inc</p>
+        </div>
+      </div>
+    </div>
     </footer>
   </body>
 </html>
