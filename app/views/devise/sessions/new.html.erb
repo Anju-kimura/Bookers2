@@ -1,3 +1,12 @@
+<% if resource.errors.any? %>
+  <%= resource.errors.count %>件のエラーが発生しました
+  <ul>
+    <% resource.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
