@@ -1,19 +1,23 @@
 <div>
   <%= flash[:notice] %>
 </div>
-<h1>
-  welcome to <strong><i class="fa-solid fa-book"></i>Bookers</strong>!!
-</h1>
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+  <div class="row text-center">
+    <div class="col-12 mb-4">
+      <h1>
+        Welcome to <strong><i class="fa-solid fa-book"></i> Bookers</strong>!!
+      </h1>
+    </div>
 
-<div>
-  <p>in <i class="fa-solid fa-book"></i>Bookers,</p>
-  <p>you can share and exchange your opinions, inpressions, and emotions</p>
-  <p>about various books!</p>
-</div>
+    <div class="col-12 mb-4">
+      <p>In <i class="fa-solid fa-book"></i> Bookers,</p>
+      <p>you can share and exchange your opinions, impressions, and emotions</p>
+      <p>about various books!</p>
+    </div>
 
-<div>
-  <%= link_to "Log in", new_user_session_path %>
-</div>
-<div>
-  <%= link_to "Sign up", new_user_registration_path %>
+    <div class="col-12 d-flex flex-column align-items-center">
+      <%= link_to "Log in", new_user_session_path, class: "btn btn-primary mb-2 w-50" %>
+      <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success w-50" %>
+    </div>
+  </div>
 </div>
